@@ -85,8 +85,8 @@ class Ui_Home(object):
                     # Generate HTML table
                     html_content = '''
                      <html>
-                         <body style="margin-top: 35px;"> <!-- Added margin-top for spacing -->
-                             <table border="1" style="margin-top: 20px;"> <!-- Added margin-top for the table -->
+                         <body style="margin-top: 67px;"> <!-- Added margin-top for spacing -->
+                             <table border="1" style="margin-top: 30px;"> <!-- Added margin-top for the table -->
                      '''
                     
                     paired_data = itertools.zip_longest(items, invoices, names, prices, citys)
@@ -103,7 +103,7 @@ class Ui_Home(object):
                      </td>
                      <td style="padding: 10px; font-size: 18px;">
                          <strong>To:</strong><br>
-                         <strong>{name1}</strong><br> <!-- Name made bold -->
+                         {name1}<br> <!-- Name made bold -->
                          <h4 style="margin-top: 5px;">{city1}</h4> <!-- Added margin-top: 5px -->
                          <hr style="width: 80%; margin: 10px auto;"> <!-- Same styling for consistent alignment -->
                          Item: {item1}<br>Invoice No: {invoice1}
@@ -118,7 +118,7 @@ class Ui_Home(object):
                      </td>
                      <td style="padding: 10px; font-size: 18px;">
                          <strong>To:</strong><br>
-                         <strong>{name2}</strong><br> <!-- Name made bold -->
+                         {name2}<br> <!-- Name made bold -->
                          <h4 style="margin-top: 5px;">{city2}</h4> <!-- Added margin-top: 5px -->
                          <hr style="width: 80%; margin: 10px auto;"> <!-- Same styling for consistent alignment -->
                          Item: {item2}<br>Invoice No: {invoice2}
