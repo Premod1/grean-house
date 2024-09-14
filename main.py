@@ -85,8 +85,8 @@ class Ui_Home(object):
                     # Generate HTML table
                     html_content = '''
                      <html>
-                         <body style="margin-top: 67px;"> <!-- Added margin-top for spacing -->
-                             <table border="1" style="margin-top: 30px;"> <!-- Added margin-top for the table -->
+                         <body style="margin-top: 65px;"> <!-- Added margin-top for spacing -->
+                             <table border="1" style="margin-top: 20px;"> <!-- Added margin-top for the table -->
                      '''
                     
                     paired_data = itertools.zip_longest(items, invoices, names, prices, citys)
