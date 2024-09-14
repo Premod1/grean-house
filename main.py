@@ -83,42 +83,48 @@ class Ui_Home(object):
                     citys = df['City']
                     
                     # Generate HTML table
-                    html_content = '<html><body><table border="1">'
-                    html_content += '<tr><th>From</th><th>To</th><th>From</th><th>To</th></tr>'
+                    html_content = '''
+                     <html>
+                         <body style="margin-top: 35px;"> <!-- Added margin-top for spacing -->
+                             <table border="1" style="margin-top: 20px;"> <!-- Added margin-top for the table -->
+                     '''
                     
                     paired_data = itertools.zip_longest(items, invoices, names, prices, citys)
                     for (item1, invoice1, name1, price1, city1), (item2, invoice2, name2, price2, city2) in zip(paired_data, paired_data):
                         html_content += f'''
-                  <tr>
-                      <td style="padding: 10px;">
-                          <div style="text-align: center; font-size: 18px;">
-                              From:<br>Green House Lk<br>Matale<br>0728883082<br>
-                              <hr style="width: 80%; margin: 10px auto;"> <!-- Added consistent margin and width -->
-                              <span style="font-size: 28px; font-weight: bold;">COD</span><br>
-                              <span style="font-size: 28px; font-weight: bold;">RS.{price1}</span>
-                          </div>
-                      </td>
-                      <td style="padding: 10px; font-size: 18px;">
-                          To:<br>{name1}<br>
-                          <h4>{city1}</h4>
-                          <hr style="width: 80%; margin: 10px auto;"> <!-- Same styling for consistent alignment -->
-                          Item: {item1}<br>Invoice No: {invoice1}
-                      </td>
-                      <td style="padding: 10px;">
-                          <div style="text-align: center; font-size: 18px;">
-                              From:<br>Green House Lk<br>Matale<br>0728883082<br>
-                              <hr style="width: 80%; margin: 10px auto;"> <!-- Same styling for consistent alignment -->
-                              <span style="font-size: 28px; font-weight: bold;">COD</span><br>
-                              <span style="font-size: 28px; font-weight: bold;">RS.{price2}</span>
-                          </div>
-                      </td>
-                      <td style="padding: 10px; font-size: 18px;">
-                          To:<br>{name2}<br>
-                          <h4>{city2}</h4>
-                          <hr style="width: 80%; margin: 10px auto;"> <!-- Same styling for consistent alignment -->
-                          Item: {item2}<br>Invoice No: {invoice2}
-                      </td>
-                  </tr>
+                 <tr>
+                     <td style="padding: 10px;">
+                         <div style="text-align: center; font-size: 18px;">
+                             From:<br>Green House Lk<br>Matale<br>0728883082<br>
+                             <hr style="width: 80%; margin: 10px auto;"> <!-- Added consistent margin and width -->
+                             <span style="font-size: 28px; font-weight: bold;">COD</span><br>
+                             <span style="font-size: 28px; font-weight: bold;">RS.{price1}</span>
+                         </div>
+                     </td>
+                     <td style="padding: 10px; font-size: 18px;">
+                         <strong>To:</strong><br>
+                         <strong>{name1}</strong><br> <!-- Name made bold -->
+                         <h4 style="margin-top: 5px;">{city1}</h4> <!-- Added margin-top: 5px -->
+                         <hr style="width: 80%; margin: 10px auto;"> <!-- Same styling for consistent alignment -->
+                         Item: {item1}<br>Invoice No: {invoice1}
+                     </td>
+                     <td style="padding: 10px;">
+                         <div style="text-align: center; font-size: 18px;">
+                             From:<br>Green House Lk<br>Matale<br>0728883082<br>
+                             <hr style="width: 80%; margin: 10px auto;"> <!-- Same styling for consistent alignment -->
+                             <span style="font-size: 28px; font-weight: bold;">COD</span><br>
+                             <span style="font-size: 28px; font-weight: bold;">RS.{price2}</span>
+                         </div>
+                     </td>
+                     <td style="padding: 10px; font-size: 18px;">
+                         <strong>To:</strong><br>
+                         <strong>{name2}</strong><br> <!-- Name made bold -->
+                         <h4 style="margin-top: 5px;">{city2}</h4> <!-- Added margin-top: 5px -->
+                         <hr style="width: 80%; margin: 10px auto;"> <!-- Same styling for consistent alignment -->
+                         Item: {item2}<br>Invoice No: {invoice2}
+                     </td>
+                 </tr>
+
 
 
                         '''
