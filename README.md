@@ -26,37 +26,4 @@ This project is a desktop application built using PyQt5 that allows users to upl
    ```bash
    git clone https://github.com/Premod1/grean-house.git
 
-   ```
 
-2. Install the required Python packages:
-
-   ```bash
-    pip install PyQt5 pandas openpyxl pdfkit
-
-   ```
-
-3. Install wkhtmltopdf for your operating system:
-   ```bash
-   sudo apt-get install wkhtmltopdf
-
-## Usage
-
-   Run the Python application:
-
-```bash
-    python main.py
-
-Use the GUI to upload an Excel file containing the required columns (Item, Invoice, Name, Price, City).
-
-Once the file is uploaded, the app generates an HTML document with a formatted table and provides an option to download it as a PDF.
-
-The generated PDF will be saved in your Downloads folder with a timestamped filename.
-
-File Structure
-plaintext
-Copy code
-.
-├── main.py # Main application script
-├── README.md # This README file
-├── requirements.txt # List of required packages
-└── final_output.html # Generated HTML file (created during runtime)
