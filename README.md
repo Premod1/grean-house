@@ -27,3 +27,5 @@ This project is a desktop application built using PyQt5 that allows users to upl
    git clone https://github.com/Premod1/grean-house.git
    pip install PyQt5 pandas openpyxl pdfkit
 
+2. Install the required Python packages:
+
